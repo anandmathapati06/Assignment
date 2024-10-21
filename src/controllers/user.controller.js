@@ -3,7 +3,7 @@ import { format, isValid } from "date-fns"; // For date formatting and validatio
 import ClaimHistory from "../models/claimsHistory.model.js";
 export const getAllUser = async (req, res) => {
   try {
-    const allUsers = await User.find().sort({Points : -1});
+    const allUsers = await User.find();
     res.status(200).json({
       success: true,
       message: "user fetched successfully",
